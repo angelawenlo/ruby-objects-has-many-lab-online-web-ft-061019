@@ -10,9 +10,12 @@ class Artist
 
 
   def add_song(song)
-    @songs << song
     song.artist = self
+    #argument(song instance = song1).artist=(writer of the song class) = self (Artist instance) because we are in an instance method
+
+    @songs << song
     @@song_count +=1
+      binding.pry
   end
 
   def songs
